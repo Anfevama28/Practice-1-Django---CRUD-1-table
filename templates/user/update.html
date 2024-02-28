@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>save</button>
+</form>

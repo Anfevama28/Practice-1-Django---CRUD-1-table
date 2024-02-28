@@ -1,0 +1,20 @@
+{% extends 'user/base.html'%}
+
+{% block content %}
+
+    <h1>{{title}}</h1>
+
+    <table border="">
+        {% for i in list %}
+            <tr>
+                    <td>{{i.first_name}}</td>
+                    <td>{{i.last_name}}</td>
+                    <td>{{i.username}}</td>
+                    <td>{{i.email}}</td>
+                    <td><a href="{% url 'update' i.pk %}">Edit</a></td>
+                    <td><a href="{% url 'delete' i.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

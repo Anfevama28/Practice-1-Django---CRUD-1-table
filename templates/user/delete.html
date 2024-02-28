@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <h2>Quieres eliminar al usuario {{object.pk}}</h2>
+    <button>Confirmar</button>
+</form>
